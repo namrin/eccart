@@ -1,0 +1,34 @@
+<body>
+<h1 class="title">Contact Us</h1><br>
+<div align="center">
+<h4>EC_CART PVT LTD</h4>
+1st FLOOR , APEX BUILDINGS, ASHOKA ROAD <br />
+KALOOR , KOCHI 682017, INDIA<br/>
+TEL: +91 484-6462287<br/>
+info@nuventure.in<br/>
+</div><br/><br/>
+
+
+<div>
+
+<%= form_for :message, url: send_mail_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :e_mail%><br>
+    <%= f.text_field :email %>
+  </p>
+ 
+  <p>
+    <%= f.label :message %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit "Send Mail" %>
+  </p>
+<% end %>
+
+</div>
+</body>
