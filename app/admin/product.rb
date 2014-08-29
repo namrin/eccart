@@ -14,5 +14,4 @@ ActiveAdmin.register Product do
   #  permitted
   # end
 
-
 end
