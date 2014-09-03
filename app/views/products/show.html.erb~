@@ -7,7 +7,7 @@
    <td><%= @product.name %></td>
    <td><%= @product.price %></td>
  </tr> 
- <tr align="center">
-   <td align="center" colspan="2"><%= image_tag(@product.image) %></td>
+ <tr>
+   <td align="center" colspan="2"><%= image_tag(@product.image, size: "100x100", alt: "No image available") %></td>
  </tr>
 </table>

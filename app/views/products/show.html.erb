@@ -8,6 +8,10 @@
    <td><%= @product.price %></td>
  </tr> 
  <tr>
-   <td align="center" colspan="2"><%= image_tag(@product.image) %></td>
+   <td class="r", colspan="2"><%= image_tag(@product.image, size: "200x100", alt: "No image available") %></td>
  </tr>
+
+ 
+ <tr><td  style="background-color:yellow", class="r", colspan="2"><%= link_to image_tag("http://favoursgroup.com/Images/Icons/RedCart.png", size: "70x70", border: 0) %>
+ Add to Cart</td></tr>
 </table>

@@ -1,1 +1,16 @@
-<h1>Welcome to your dashboard</h1>
+
+<% if (current_user.admin?) %>
+  <h1 class="title">WELCOME ADMIN</h1>
+  <div align="center">
+    <table id="adminindex">
+     <tr>
+        <td class="alt"><%= link_to 'Add a new Product', new_product_path %></td>
+        <td><%= link_to 'Edit a Product', admin_products_list_path %></td>
+     </tr>
+      <tr>
+        <td ><%= link_to 'List all Products', admin_products_list_path %></td>
+        <td class="alt"><%= link_to 'Delete a Product', admin_products_list_path %></td>
+      </tr>
+    </table>
+   </div>
+<% end %>
