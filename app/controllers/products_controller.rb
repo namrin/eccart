@@ -5,13 +5,21 @@ end
 def show
   @product=Product.find(params[:id])
 end
+
 def index
+ if params[:request_type]=="all"
   @products= Product.all
+ else
+  @products= Product.where(category: params[:request_type])
+  end
+ 
 end
 def edit
   @product = Product.find(params[:id])
 end
- 
+def adminindex
+  @products= Product.all
+end 
 def update
   @product=Product.find(params[:id])
   if @product.update(product_params)
@@ -29,7 +37,12 @@ def create
     render 'new'
   end
 end
-
+def destroy
+  @product = Product.find(params[:id])
+  @product.destroy
+ 
+  redirect_to products_path
+end
 
 private
   def product_params
