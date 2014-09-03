@@ -5,11 +5,16 @@
     <th>Product</th>
     <th>Price</th>
   </tr>
+
  
   <% @products.each do |product| %>
     <tr>
+      <td><%= image_tag(product.image,size: "200x100") %></td>
       <td><%= product.name %></td>
       <td><%= product.price %></td>
+      <td><%= link_to 'Show', product_path(product) %></td>
+      <td><%= link_to 'Add to Cart' %></td>
+
     </tr>
   <% end %>
 </table>
