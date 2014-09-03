@@ -13,9 +13,10 @@
  
  *= require_self
  *= require foundation_and_overrides
-
+ 
  */
-.test {
+.title {
  text-align: center;
  color: blue; 
 }
+
