@@ -43,7 +43,7 @@
       <li class="divider"></li>
       <li><%= link_to "Home", root_path %></li>
       <li class="divider"></li>
-      <li><%= link_to "Browse Products", products_path %></li>
+      <li><%= link_to "Browse Products", products_path(request_type: "all") %></li>
       <li class="divider"></li>
       <li><%= link_to "Terms of Service", terms_of_service_path %></li>
       <li class="divider"></li>
@@ -59,7 +59,7 @@
   <div class="small-3 columns" style="background-color:yellow;float:left;width:150px;"> 
      <div class="nav">
      <ul class="side-nav">
-     <li class="active"><a href="#">Grocery</a>
+     <li class="active"><%= link_to "Grocery", products_path(request_type: "aata") %>
        <ul class="square"><li>Pulses</li>
        <li>Oil & Ghee </li>
        <li>Rice & Flours </li>
@@ -71,7 +71,7 @@
     <li class="divider"></li>
     <li>Fruits & Vegetables</li>
     <li class="divider"></li>
-    <li>Personal & Home care</li>
+    <li><%= link_to "Personal & Home care", products_path(request_type: ["soap","toothpaste"]) %></li>
     </ul>
     </div>
   </div>
@@ -92,7 +92,7 @@
     <% if user_signed_in? %>
      Signed in as <%= current_user.email %> Not you?
      <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %> <% end %>
-     <%= link_to 'Admin login', admin_user_session_path %>
+     
    </div>
    </div>
 

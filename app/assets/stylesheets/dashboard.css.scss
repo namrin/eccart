@@ -1,3 +1,21 @@
 // Place all the styles related to the dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#adminindex {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+#adminindex td
+{
+ text-align: center;
+ border: 1px solid #98bf21;
+}
+.alt {
+    background-color: #A7C942;
+    color: #ffffff;
+}
+
+
+//@import 'foundation';
