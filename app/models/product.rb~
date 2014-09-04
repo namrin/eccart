@@ -1,2 +1,5 @@
 class Product < ActiveRecord::Base
+mount_uploader :image, ImageUploader
+validates :name, :brand, :category, :price, :image, presence: true
+has_many :cart_items
 end
