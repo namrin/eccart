@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+root 'home#index'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -14,13 +14,15 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  
 
   # Example of regular route:
   get 'contact_us' => 'home#contact'
   get 'terms_of_service' => 'home#service'
   post 'send_mail' => 'home#send_mail' 
   get 'send_mail' => 'home#new_mail'
+  get 'admin_products_list' => 'products#adminindex'
+  
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
   # Example resource route (maps HTTP verbs to controller actions automatically):
